@@ -172,17 +172,21 @@ Component({
       // 循环本月天数添加到数组
       for (let i = 1; i <= new Date(year, month, 0).getDate(); i++) {
         let have = false;
+        let cls;
         for (let j = 0; j < selected.length; j++) {
           let selDate = selected[j].date.split('-');
+          let selClass = selected[j].selClass || 'data-circle';
 
           if (Number(year) === Number(selDate[0]) && Number(month) === Number(selDate[1]) && Number(i) === Number(selDate[2])) {
             have = true;
+            cls = selClass;
           }
         }
         dates.currentMonthDys.push({
           'date': i + "",
           'month': month,
-          have
+          have,
+          class: cls
         })
       }
       // 循环下个月开始几天 添加到数组

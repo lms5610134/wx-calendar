@@ -1,14 +1,13 @@
 /* pages/calendar/calendar.wxss */
 
 .calendar-box {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 140rpx;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  padding-top: 100rpx;
+  background: rgb(48, 49, 51, 0.3);
   box-sizing: border-box;
   transition: all 0.3s;
   opacity: 0;
@@ -33,23 +32,10 @@
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  display: inline-block;
   height: 100rpx;
-  /* width: 100%; */
   background: #fff;
-  /* padding: 0 30rpx; */
   z-index: 10000;
-}
-
-.top-jiantou {
-  width: 100rpx;
-  height: 100rpx;
-  text-align: center;
-  box-sizing: border-box;
-  line-height: 100rpx;
 }
 
 .iconfont {
@@ -90,11 +76,14 @@
   margin: 0 30rpx;
   width: 240rpx;
   height: 53rpx;
-  border: 1rpx solid #52b8f5;
+  padding-left: 34rpx;
+  background: #C6C8CC;
   border-radius: 26rpx;
-  color: #52b8f5;
+  color: #303133;
   font-size: 26rpx;
+  line-height: 52rpx;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .calendar-panel {
@@ -151,7 +140,7 @@
   width: 100%;
   text-align: center;
   line-height: 80rpx;
-  color: #52b8f5;
+  color: #84878C;
 }
 
 .calendar-body {
@@ -183,8 +172,16 @@
 }
 
 .date-current {
-  background: #52b8f5;
+
+}
+.date-current-text {
+  width: 54rpx;
+  height: 54rpx;
+  line-height: 56rpx;
+  display: inline-block;
   color: #fff;
+  background: #5781F2;
+  border-radius: 50%;
 }
 
 .data-circle {
@@ -196,8 +193,11 @@
   width: 10rpx;
   height: 10rpx;
   border-radius: 50%;
-  background: #ff5a5f;
+  background: #5781F2;
   z-index: 2;
+}
+.data-circle-abnormal {
+  background: #ff5a5f;
 }
 
 .packup {
